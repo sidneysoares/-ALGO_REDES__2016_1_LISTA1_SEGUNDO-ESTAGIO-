@@ -1,0 +1,23 @@
+preços = list()
+
+for i in range (1, 6):
+	preços.append(float(input("Senhor(a), por gentileza insira o preço do seu produto n. %d: " % i)))
+
+media_de_preço = (float (preços[0]) + (preços[1]) + (preços[2]) + (preços[3]) + (preços[4])) / 5	
+preço_inferior = 0
+preço_entre = 0
+preço_acima = 0
+
+for preço in preços:
+	if preço < 50 :
+		preço_inferior = preço_inferior + 1
+	if preço >= 50 and preço <= 80 :
+		preço_entre = preço_entre + 1 
+	if preço > 80:
+		preço_acima = preço_acima + 1
+	
+
+print (" A quantidade de produtos com preços inferiores que R$ 50,00 são: %d " % preço_inferior)
+print (" A quantidade de produtos com preço entre R$ 50,00 e R$ 80,00 são: %d " % preço_entre)
+print (" A quantidade de produtos com preço acima de R$ 80,00 são: %d " % preço_acima)
+print (" A media de preços de seus produtos são: %.2f" % media_de_preço)
